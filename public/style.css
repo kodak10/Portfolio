@@ -1,0 +1,356 @@
+/**Couleur generale***  26104e***/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fbfbfe !important;
+}
+/******Navbar*****/
+header{
+    padding: 30px 0px;
+}
+.navbar-brand{
+    font-weight: bold;
+}
+header .navbar{
+    background-color: #fbfbfe !important;
+}
+header .nav-item{
+    margin-right: 20px;
+}
+.nav-link:hover{
+    color: #cda58e !important;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+.navbar .active{
+    color: #cda58e !important;
+    font-weight: bold;
+}
+.bar{
+    border-right: 4px solid #cda58e;
+}
+/*****Banner*******/
+.banner{
+    min-height: 90vh;
+    background-color: #fbfbfe;
+    display: grid;
+    place-items: center;
+}
+.banner .content a{
+    color: #26104e;
+    text-decoration: none;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.banner .content a:hover{
+    transform: translateY(-10px);
+    transition: 0.3s all ease-in-out;
+    color:#cda58e;
+}
+.banner .name_job h3{
+    color: #26104e;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.banner .name_job h5{
+    color: #cda58e;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.banner .description p{
+    margin-bottom: 40px;
+    color: #555555;
+}
+.banner .description button{
+    background: #cda58e;
+    padding: 10px;
+    border: 2px solid #cda58e;
+    border-radius: 5px;
+    margin-bottom: 100px;
+}
+.banner button:hover{
+    background-color: #cda58eb8;
+    border: 2px solid #cda58eb8;
+}
+.banner .description button a{
+    text-decoration: none;
+    color: #ffff;
+    font-weight: bold;
+}
+.banner .description button a span{
+    margin-left: 10px;
+}
+.banner .social{
+    display: grid;
+    place-items: center;
+}
+.banner .content{
+    display: flex;
+    flex-direction: column;
+}
+/********About*******/
+.about{
+    min-height: 90vh;
+}
+.about .experience{
+    display: flex;
+}
+.about button{
+    background: #cda58e;
+    padding: 10px;
+    border: 2px solid #cda58e;
+    border-radius: 5px;
+    margin-bottom: 100px;
+}
+.about button a{
+    text-decoration: none;
+    color: #ffff;
+    font-weight: bold;
+}
+.about img{
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+}
+.experience{
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+}
+.year,.projects{
+    box-shadow: 8px 6px 19px 2px #cacaca;
+    -webkit-box-shadow: 8px 6px 19px 2px #cacaca;
+    -moz-box-shadow: 8px 6px 19px 2px #cacaca;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.year .number {
+    font-weight: bold;
+    font-size: 21px;
+ }
+.projects .number{
+   font-weight: bold;
+    font-size: 21px;
+}
+
+
+/******Skills*******/
+.skills{
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills .accordion-item .accordion-button{
+    background-color: #cda58e;
+    color: #ffff;
+    font-weight: bold;
+    font-size: 18px;
+}
+.skills .content{
+    width: 90%;
+    margin: auto;
+}
+.skills .skills_title{
+    display: flex;
+    justify-content: space-between;
+}
+.skills .skills_title h5{
+    font-weight: bold;
+    color: #cda58e;
+    font-size: 14px;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: #fff !important;
+    outline: none;
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, 0) !important;
+}
+
+/****Parcours****/
+.parcours nav i{
+    margin: 30px;
+    font-size: 32px;
+    color: #cda58e;
+}
+.parcours nav{
+    margin-bottom: 60px;
+}
+
+/*******Services*****/
+.services{
+    min-height: 70vh;
+    display: grid;
+    place-items: center;
+}
+.services .box{
+    background: #e8e8ee5e;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+.services .box:hover{
+    background: #cda58e;
+    transform: rotate(-5deg);
+   
+    transition: 0.3s all ease-in-out;
+}
+.services .box:hover .content span{
+    color: #fff;
+}
+.services .box .content{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.services .more{
+    cursor: pointer;
+}
+
+/******Testimonial****/
+
+.testimonial .item{
+    display: flex;
+}
+.testimonial img{
+    width: 80px !important;
+    height: 80px;
+    border-radius: 100%;
+    margin-right: 30px;
+}
+
+
+/******Portfolio*****/
+.portfolio{
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+}
+.portfolio .item{
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+.portfolio .item .desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio img{
+    width: 250px !important;
+    height: 250px;
+    border-radius: 3px;
+}
+
+/**Owl navigation**/
+.owl-nav{
+    display: flex;
+    justify-content: center;
+}
+
+/******Project*****/
+.project{
+   background-color: #cda58e;
+
+}
+.project .box {
+    min-height: 30vh;
+}
+.project .box img{
+    margin-top: -150px;
+}
+.project .content p{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 21px;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+@media (max-width:991px) {
+
+    /*******Navbar****/
+    header {
+        padding: 0px 0px;
+    }
+    .navbar{
+        position: fixed !important;
+        bottom: 0;
+        width: 100%;
+        z-index: 999;
+    }
+    .navbar-nav{
+        display: grid !important;
+        place-items: center;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .navbar-collapse{
+        margin-top: 30px;
+    }
+    .bar{
+        display: none;
+    }
+    .navbar-brand{
+        margin-top: 20px;
+    }
+    header button{
+        margin-top: 20px;
+    }
+    /*******Banner******/
+    .banner .txt{
+        display: flex;
+        flex-direction:column;
+        
+    }
+    
+    .banner .description button{
+        margin-bottom: 15px;
+    }
+    .banner .content{
+        margin-bottom: 10px;
+        flex-direction: row;
+    }
+    .banner .content a{
+        margin: 20px;
+        margin-top: 50px;
+    }
+
+    /*********ABOUT********/
+    .experience{
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    .about .container > .row{ 
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about button{
+        margin-bottom: 30px;
+    }
+
+    /*********Skill*****/
+    .skills h3{
+        margin-top: 30px;
+    }
+    /*******Testimonal****/
+    .testimonial{
+       margin-top: 30px;             
+    }
+
+    
+}
+@media (max-width:641px) {
+    .navbar-nav{
+        grid-template-columns: repeat(auto 1fr);
+    }
+}
