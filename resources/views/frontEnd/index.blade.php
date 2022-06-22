@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="{{asset('style.css')}}">
 
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
@@ -535,12 +537,9 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="{{asset('js/app.js')}}">
 
-
+    </script>
     <script>
         $(document).ready(function(){
            

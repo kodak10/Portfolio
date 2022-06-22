@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use CreateBannersTable;
-use Illuminate\Http\Request;
+use App\Models\About;
 use App\Models\Banner;
+use App\Models\Competence;
+use App\Models\CompetenceLangage;
+use Illuminate\Http\Request;
 
-class BannerController extends Controller
+class AccueilController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +17,7 @@ class BannerController extends Controller
      */
     public function index()
     {
-        //
+        return view('frontEnd.master');
     }
 
     /**
@@ -45,10 +47,14 @@ class BannerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(banner $id)
+    public function show()
     {
         $banner = banner::get();
-        return view('frontEnd.index', compact("banner"));
+        $about = about::get();
+        $competence = Competence::get();
+        $competenceLangage = CompetenceLangage::get();
+ 
+        return view ('frontEnd.master', compact('banner', 'about','competence', 'competenceLangage'));
     }
 
     /**

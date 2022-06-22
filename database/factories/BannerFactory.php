@@ -14,9 +14,9 @@ class BannerFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
-            'job' => $this->faker->jobTitle(),
-            'paragraphe' => $this->faker->text(200),
+            'name' => "Kouassi Atchin Parfait Aymard",
+            'job' => "Developpeur Web et Mobile",
+            'paragraphe' => $this->faker->text(),
             'photo' => $this->faker->imageUrl(),
         ];
     }
