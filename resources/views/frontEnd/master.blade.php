@@ -188,21 +188,20 @@
                                         <div class="langage">
                                             <span>Langages</span>
                                             <div class="content p-2">
-                                                @foreach ( $competenceLangage->libCompetenceLangage as $langages )
+                                                @foreach ( $langage->libCompetenceLangage as $langages )
                                                     
-                                                
                                                     <div class="skills_title">
                                                         <h5 class="skills_name">{{ $langages->libCompetenceLangage  }}</h5>
                                                         <span class="skills_number">{{ $langages->pourcentage}}%</span>
                                                     </div>
                                                     <div class="skills_pourcentage">
-                                                        <progress class="w-100" value="50" max="100"></progress>
+                                                        <progress class="w-100" value="{{ $langages->pourcentage}}" max="100"></progress>
                                                     </div>
                                                 @endforeach
                                             </div>
-                                            
                                         </div>
-        
+
+                                        
                                         {{-- <div class="langage">
                                             <span>Framework</span>
                                             <div class="content p-2">

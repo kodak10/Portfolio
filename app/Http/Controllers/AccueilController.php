@@ -57,19 +57,14 @@ class AccueilController extends Controller
         $langage = CompetenceLangage::get();
         // $competenceLangage = CompetenceLangage::orderBy('libCompetenceLangage','asc')->get(); 
         // $competenceLangage = CompetenceLangage::where()->get();
-
-        $competenceLangage = [$langage, $competence];
-        
-
-
-        //$langage = Competence::where([Competence::get('id') , CompetenceLangage::get('competences_id')]);
+       
+        $langage = Competence::where([Competence::get('id') , CompetenceLangage::get('competences_id')]);
 
         return view ('frontEnd.master', compact(
                                             'banner', 
                                             'about',
                                             'competence',
-                                            'competenceLangage',
-
+                                            'langage',
                                         ));
         }
 
