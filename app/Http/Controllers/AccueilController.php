@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Banner;
 use App\Models\Competence;
-use App\Models\CompetenceLangage;
 use App\Models\Education;
+use App\Models\Service;
+use App\Models\Work;
 use Illuminate\Http\Request;
 
 class AccueilController extends Controller
@@ -50,23 +51,14 @@ class AccueilController extends Controller
      */
     public function show()
     {
-        $banner = banner::get();
-        $about = about::get();
-        $competence = competence::orderby('title', 'desc')->get();
+        $banner = Banner::get();
+        $about = About::get();
+        $competence = Competence::orderby('title', 'desc')->get();
+        $work = Work::orderby('anneeDebut', 'desc')->get();
+        $education = Education::orderby('anneeDebut', 'desc')->get();
+        $service = Service::get();
 
-        $langage = CompetenceLangage::get();
-        // $competenceLangage = CompetenceLangage::orderBy('libCompetenceLangage','asc')->get(); 
-        // $competenceLangage = CompetenceLangage::where()->get();
-       
-        $langage = Competence::where([Competence::get('id') , CompetenceLangage::get('competences_id')]);
-
-        return view ('frontEnd.master', compact(
-                                            'banner', 
-                                            'about',
-                                            'competence',
-                                            'langage',
-                                        ));
-                                        
+            return view ('frontEnd.master', compact('banner','about','competence','work', 'education','service'));
         }
 
     /**

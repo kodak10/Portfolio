@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class CompetenceFrameworkFactory extends Factory
+class PortfolioFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,8 +14,9 @@ class CompetenceFrameworkFactory extends Factory
     public function definition()
     {
         return [
-            "libCompetenceFramework" => $this->faker->realTextBetween(10),
-            'competences_id' => rand(1,4),           
+            'image' => $this->faker->imageUrl(),
+            'text' => $this->faker->text(),
+            'lieu' => $this->faker->streetName(),
         ];
     }
 }

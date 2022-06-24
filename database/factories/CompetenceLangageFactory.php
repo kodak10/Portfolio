@@ -15,7 +15,7 @@ class CompetenceLangageFactory extends Factory
      */
     public function definition()
     {
-         return [
+        return [
             "libCompetenceLangage" => $this->faker->realTextBetween(10),
             'competences_id' => rand(1,4),
             'pourcentage' => rand(45,90),             

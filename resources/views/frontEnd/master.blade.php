@@ -188,14 +188,14 @@
                                         <div class="langage">
                                             <span>Langages</span>
                                             <div class="content p-2">
-                                                @foreach ( $langage->libCompetenceLangage as $langages )
+                                                @foreach ( $competences->competenceslangages as $competence )
                                                     
                                                     <div class="skills_title">
-                                                        <h5 class="skills_name">{{ $langages->libCompetenceLangage  }}</h5>
-                                                        <span class="skills_number">{{ $langages->pourcentage}}%</span>
+                                                        <h5 class="skills_name">{{ $competence->libCompetenceLangage  }}</h5>
+                                                        <span class="skills_number">{{ $competence->pourcentage}}%</span>
                                                     </div>
                                                     <div class="skills_pourcentage">
-                                                        <progress class="w-100" value="{{ $langages->pourcentage}}" max="100"></progress>
+                                                        <progress class="w-100" value="{{ $competence->pourcentage}}" max="100"></progress>
                                                     </div>
                                                 @endforeach
                                             </div>
@@ -264,13 +264,129 @@
                 </nav>
                   <div class="tab- text-center mb-5" id="nav-tabContent">
                     <div class="tab-pane fade active" id="nav-school" role="tabpanel" aria-labelledby="nav-school-tab">
-                        Education
+                        <ul>
+                            @foreach ($education as $educations )
+                                <li>
+                                    {{$educations->anneeDebut}} - {{$educations->anneeFin}}
+                                
+                                </li>
+                               
+                                <p>{{$educations->description}}</p>
+
+                            @endforeach
+                        </ul>
                     </div>
                     <div class="tab-pane fade" id="nav-work" role="tabpanel" aria-labelledby="nav-work-tab">
-                        Work
+                       
+                        <ul>
+                            @foreach ( $work as $works )
+                                <li>
+                                    {{$works->jj}} - {{$works->anneeFin}}
+                                
+                                </li>
+                                <p><span>{{$works->job}}</span> <span>{{$works->entreprise}}</span> </p>
+                                <p>{{$works->description}}</p>
+
+                            @endforeach
+                            
+                        </ul>
+                            
+                            
+                            
+                        
                     </div>
                   </div>
                   
+            </div>
+        </div>
+
+
+        <div class="skills" id="skills"><!--services-->
+            <div class="container ">
+                <h3 class="text-center mb-5">Mes Services</h3>
+                <div class="row justify-content-center">
+                    @foreach ($service as $services )
+                    <div class="col-lg-5">
+                        
+                       
+                    
+                        <div class="accordion mb-5" id="web">
+                            <div class="accordion-item">
+                                
+
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        {{ $services->title }}
+                                    </button>
+                                </h2>
+
+                                
+
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#web">
+                                    <div class="accordion-body">
+                                        <div class="langage">
+                                            <span>Langages</span>
+                                            <div class="content p-2">
+                                                @foreach ( $services->service as $serviceDetails )
+                                                    
+                                                    <div class="skills_title">
+                                                        <h5 class="skills_name">{{ $serviceDetails->libservice  }}</h5>
+                                                    </div>
+                                                   
+                                                @endforeach
+                                            </div>
+                                        </div>
+
+                                        
+                                        {{-- <div class="langage">
+                                            <span>Framework</span>
+                                            <div class="content p-2">
+                                                <div class="skills_title">
+                                                    <h5 class="skills_name">BOOTSTRAP</h5>
+                                                    <span class="skills_number">50%</span>
+                                                </div>
+                                                <div class="skills_pourcentage">
+                                                    <progress class="w-100" value="50" max="100"></progress>
+                                                </div>
+                                            </div>
+                                            <div class="content p-2">
+                                                <div class="skills_title">
+                                                    <h5 class="skills_name">LARAVEL</h5>
+                                                    <span class="skills_number">50%</span>
+                                                </div>
+                                                <div class="skills_pourcentage">
+                                                    <progress class="w-100" value="50" max="100"></progress>
+                                                </div>
+                                            </div>
+                                            <div class="content p-2">
+                                                <div class="skills_title">
+                                                    <h5 class="skills_name">VUE-JS</h5>
+                                                    <span class="skills_number">50%</span>
+                                                </div>
+                                                <div class="skills_pourcentage">
+                                                    <progress class="w-100" value="50" max="100"></progress>
+                                                </div>
+                                            </div>
+                                            <div class="content p-2">
+                                                <div class="skills_title">
+                                                    <h5 class="skills_name">REACT JS</h5>
+                                                    <span class="skills_number">50%</span>
+                                                </div>
+                                                <div class="skills_pourcentage">
+                                                    <progress class="w-100" value="50" max="100"></progress>
+                                                </div>
+                                            </div>
+                                        </div> --}}
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          
+                    </div>
+                    @endforeach()
+        
+                </div>
             </div>
         </div>
 

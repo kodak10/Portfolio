@@ -18,6 +18,12 @@ class Competence extends Model
         return $this->hasMany(CompetenceLangage::class, 'competences_id' ,'id');
 
     }
+
+    public function competencesframeworks()
+    {
+        return $this->hasMany(competencesframeworks::class, 'competences_id' ,'id');
+
+    }
     
 
 }
