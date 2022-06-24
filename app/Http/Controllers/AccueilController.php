@@ -66,6 +66,7 @@ class AccueilController extends Controller
                                             'competence',
                                             'langage',
                                         ));
+                                        
         }
 
     /**
