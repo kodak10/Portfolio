@@ -6,6 +6,7 @@ use App\Models\About;
 use App\Models\Banner;
 use App\Models\Competence;
 use App\Models\CompetenceLangage;
+use App\Models\Education;
 use Illuminate\Http\Request;
 
 class AccueilController extends Controller
@@ -51,11 +52,26 @@ class AccueilController extends Controller
     {
         $banner = banner::get();
         $about = about::get();
-        $competence = Competence::get();
-        $competenceLangage = CompetenceLangage::get();
- 
-        return view ('frontEnd.master', compact('banner', 'about','competence', 'competenceLangage'));
-    }
+        $competence = competence::orderby('title', 'desc')->get();
+
+        $langage = CompetenceLangage::get();
+        // $competenceLangage = CompetenceLangage::orderBy('libCompetenceLangage','asc')->get(); 
+        // $competenceLangage = CompetenceLangage::where()->get();
+
+        $competenceLangage = [$langage, $competence];
+        
+
+
+        //$langage = Competence::where([Competence::get('id') , CompetenceLangage::get('competences_id')]);
+
+        return view ('frontEnd.master', compact(
+                                            'banner', 
+                                            'about',
+                                            'competence',
+                                            'competenceLangage',
+
+                                        ));
+        }
 
     /**
      * Show the form for editing the specified resource.

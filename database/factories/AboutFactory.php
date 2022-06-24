@@ -14,7 +14,7 @@ class AboutFactory extends Factory
     public function definition()
     {
         return [
-            'textAbout' => $this->faker->text(200),
+            'textAbout' => $this->faker->realText(),
             'anneeExperience' =>$this->faker->numberBetween(1,3),
             'projetRealise' =>$this->faker->numberBetween(2,6),
             'photo' => $this->faker->imageUrl(),

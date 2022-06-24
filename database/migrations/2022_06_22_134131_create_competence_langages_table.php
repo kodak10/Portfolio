@@ -15,10 +15,11 @@ class CreateCompetenceLangagesTable extends Migration
     {
         Schema::create('competence_langages', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("competences_id")->constrained();
             $table->string('libCompetenceLangage')->nullable()->unique();
             $table->string('pourcentage');
             $table->timestamps();
+
+            $table->foreignId('competences_id')->constrained();
         });
     }
 

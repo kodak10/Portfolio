@@ -19,8 +19,6 @@ class CreateCompetencesTable extends Migration
             $table->timestamps();
         });
 
-        Schema::enableForeignKeyConstraints();
-
     }
 
     /**

@@ -188,12 +188,12 @@
                                         <div class="langage">
                                             <span>Langages</span>
                                             <div class="content p-2">
-                                                @foreach ( $competenceLangage as $competenceLangages )
+                                                @foreach ( $competenceLangage->libCompetenceLangage as $langages )
                                                     
                                                 
                                                     <div class="skills_title">
-                                                        <h5 class="skills_name">{{ $competenceLangages->libCompetenceLangage}}</h5>
-                                                        <span class="skills_number">{{ $competenceLangages->pourcentage}}%</span>
+                                                        <h5 class="skills_name">{{ $langages->libCompetenceLangage  }}</h5>
+                                                        <span class="skills_number">{{ $langages->pourcentage}}%</span>
                                                     </div>
                                                     <div class="skills_pourcentage">
                                                         <progress class="w-100" value="50" max="100"></progress>
@@ -203,7 +203,7 @@
                                             
                                         </div>
         
-                                        <div class="langage">
+                                        {{-- <div class="langage">
                                             <span>Framework</span>
                                             <div class="content p-2">
                                                 <div class="skills_title">
@@ -241,7 +241,7 @@
                                                     <progress class="w-100" value="50" max="100"></progress>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                        
                                     </div>
                                 </div>

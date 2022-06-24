@@ -6,6 +6,7 @@ use App\Models\About;
 use App\Models\Banner;
 use App\Models\Competence;
 use App\Models\CompetenceLangage;
+use App\Models\Education;
 use App\Models\User;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Database\Seeder;
@@ -24,6 +25,6 @@ class DatabaseSeeder extends Seeder
         Banner::factory(1)->create();
         About::factory(1)->create();
         Competence::factory(4)->create();
-        CompetenceLangage::factory(4)->Create();
+        CompetenceLangage::factory(10)->Create();
     }
 }

@@ -10,12 +10,14 @@ class CompetenceLangage extends Model
     use HasFactory;
 
     protected $fillable = [
-        'competence_id',
         'libCompetenceLangage',
-        'pourcenntage',
+        'pourcentage',
+        'competences_id',
     ];
 
-    public function competence(){
-        return $this->hasMany(Competence::class);
+    public function competence()
+    {
+        return $this->belongsTo(competence::class);
     }
+
 }
