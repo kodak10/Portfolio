@@ -17,6 +17,7 @@ class CreateEducationsTable extends Migration
             $table->id();
             $table->date('anneeDebut');
             $table->date('anneeFin');
+            $table->string('description');
             $table->timestamps();
         });
     }

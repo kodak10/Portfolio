@@ -7,6 +7,7 @@ use App\Models\Banner;
 use App\Models\Competence;
 use App\Models\Education;
 use App\Models\Service;
+use App\Models\Temoignage;
 use App\Models\Work;
 use Illuminate\Http\Request;
 
@@ -57,8 +58,9 @@ class AccueilController extends Controller
         $work = Work::orderby('anneeDebut', 'desc')->get();
         $education = Education::orderby('anneeDebut', 'desc')->get();
         $service = Service::get();
+        $testimonial = Temoignage::get();
 
-            return view ('frontEnd.master', compact('banner','about','competence','work', 'education','service'));
+            return view ('frontEnd.master', compact('banner','about','competence','work', 'education','service','testimonial'));
         }
 
     /**

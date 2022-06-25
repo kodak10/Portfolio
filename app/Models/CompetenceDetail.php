@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CompetenceLangage extends Model
+class CompetenceDetail extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'libCompetenceLangage',
+        'lib',
         'pourcentage',
         'competences_id',
     ];
@@ -19,5 +19,4 @@ class CompetenceLangage extends Model
     {
         return $this->belongsTo(competence::class);
     }
-
 }

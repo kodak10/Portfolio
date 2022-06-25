@@ -13,17 +13,11 @@ class Competence extends Model
         'title',
     ];
 
-    public function competenceslangages()
+    public function competencesdetail()
     {
-        return $this->hasMany(CompetenceLangage::class, 'competences_id' ,'id');
+        return $this->hasMany(CompetenceDetail::class, 'competences_id' ,'id');
 
-    }
-
-    public function competencesframeworks()
-    {
-        return $this->hasMany(competencesframeworks::class, 'competences_id' ,'id');
-
-    }
+    }  
     
 
 }

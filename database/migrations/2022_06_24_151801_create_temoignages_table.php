@@ -18,6 +18,7 @@ class CreateTemoignagesTable extends Migration
             $table->string('photo');
             $table->string('nom');
             $table->string('text');
+            $table->string('fonction');
             $table->timestamps();
         });
     }

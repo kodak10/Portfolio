@@ -13,5 +13,6 @@ class Temoignage extends Model
         'photo',
         'nom',
         'text',
+        'fonction',
     ];
 }

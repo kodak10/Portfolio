@@ -17,7 +17,7 @@ class CompetenceFactory extends Factory
     public function definition()
     {
         return [
-            "title" => $this->faker->randomElement(['Developpement Web', 'Developpement Mobile', 'Design', 'Autres']),
+            'title' => $this->faker->randomElement(['Developpement Web', 'Developpement Mobile', 'Design', 'Autres']),
         ];
     }
 }

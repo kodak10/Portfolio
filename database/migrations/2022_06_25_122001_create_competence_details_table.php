@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCompetenceLangagesTable extends Migration
+class CreateCompetenceDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateCompetenceLangagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('competence_langages', function (Blueprint $table) {
+        Schema::create('competence_details', function (Blueprint $table) {
             $table->id();
-            $table->string('libCompetenceLangage')->nullable()->unique();
+            $table->string('lib')->nullable()->unique();
             $table->string('pourcentage');
             $table->timestamps();
 
@@ -30,6 +30,6 @@ class CreateCompetenceLangagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('competence_langages');
+        Schema::dropIfExists('competence_details');
     }
 }

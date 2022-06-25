@@ -1,8 +1,27 @@
-/**Couleur generale***  26104e***/
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+   /*  --main-color: #317AC1;
+    --main-color: #3B556D;
+    --main-color: #2F4558;
+    --main-color: #2E3244;
+    --main-color: #222D41;
+    --main-color: #282E2E;
+    --main-color: #211A44;
+    --main-color: #124660;
+    --main-color: #212E53;
+    --main-color: #384454; */
+
+    --banner-text: #163A5F;
+    --global-text: #150101;
+    --text-extra: #E33E5A;
+    --button: #E33E5A;
+    --button-hover: #e33e59a4;
+    --title: #163A5F;
+    --hover:#163A5F;
 }
 
 body{
@@ -34,6 +53,10 @@ header .nav-item{
     border-right: 4px solid #cda58e;
 }
 /*****Banner*******/
+
+.banner_mobile{
+    display: none;
+}
 .banner{
     min-height: 90vh;
     background-color: #fbfbfe;
@@ -52,31 +75,31 @@ header .nav-item{
     color:#cda58e;
 }
 .banner .name_job h3{
-    color: #26104e;
+    color: var(--banner-text);
     font-weight: 700;
     font-size: 28px;
     margin-bottom: 20px;
 }
 .banner .name_job h5{
-    color: #cda58e;
+    color: var(--text-extra);
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 40px;
 }
 .banner .description p{
     margin-bottom: 40px;
-    color: #555555;
+    color: var(--global-text);
 }
 .banner .description button{
-    background: #cda58e;
+    background: var(--button);
     padding: 10px;
-    border: 2px solid #cda58e;
+    border: 2px solid var(--button);
     border-radius: 5px;
     margin-bottom: 100px;
 }
 .banner button:hover{
-    background-color: #cda58eb8;
-    border: 2px solid #cda58eb8;
+    background-color:  var(--button-hover);
+    border: 2px solid  var(--button-hover);
 }
 .banner .description button a{
     text-decoration: none;
@@ -306,6 +329,92 @@ header .nav-item{
         margin-top: 20px;
     }
     /*******Banner******/
+
+    /****Banner Mobile****/
+    .banner_mobile{
+        display: block;
+    }
+    .banner_mobile .reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    /* .banner_mobile .contents{
+        display: grid !important;
+        place-items: center;
+        grid-template-columns: repeat(2,1fr);
+    } */
+    .banner_mobile .contents{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 50px auto;
+    }
+    .banner_mobile .contents .socials{
+        display: flex;
+
+        align-items: center;
+    }
+    .banner_mobile .content a{
+        color: #26104e;
+        text-decoration: none;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .banner_mobile .content a:hover{
+        transform: translateY(-10px);
+        transition: 0.3s all ease-in-out;
+        color:#cda58e;
+    }
+    .banner_mobile .name_job h3{
+        color: var(--banner-text);
+        font-weight: 700;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .banner_mobile .name_job h5{
+        color: var(--text-extra);
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+    .banner_mobile .description p{
+        margin-bottom: 40px;
+        color: var(--global-text);
+    }
+    .banner_mobile .description button{
+        background: var(--button);
+        padding: 10px;
+        border: 2px solid var(--button);
+        border-radius: 5px;
+    }
+    .banner_mobile button:hover{
+        background-color:  var(--button-hover);
+        border: 2px solid  var(--button-hover);
+    }
+    .banner_mobile .description button a{
+        text-decoration: none;
+        color: #ffff;
+        font-weight: bold;
+    }
+    .banner_mobile .description button a span{
+        margin-left: 10px;
+    }
+    .banner_mobile .social{
+        display: grid;
+        place-items: center;
+    }
+    .banner_mobile .content{
+        display: flex;
+        flex-direction: column;
+    }
+    /****End Banner Mobile******/
+
+    /*****Banner Desktop***/
+    .banner{
+        display: none;
+    }
+    
     .banner .txt{
         display: flex;
         flex-direction:column;
@@ -325,14 +434,21 @@ header .nav-item{
     }
 
     /*********ABOUT********/
-    .experience{
+    .about{
+        margin-top: 60px;
+    }
+
+    .about .experience{
         display: grid !important;
         grid-template-columns: repeat(1, 1fr);
         
     }
-    .about .container > .row{ 
-        display: flex;
-        flex-direction: column-reverse;
+    .about .experience .year{
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    .about img{
+        width: 100%;
     }
     .about button{
         margin-bottom: 30px;
@@ -350,6 +466,10 @@ header .nav-item{
     
 }
 @media (max-width:641px) {
+    .wrapper{
+        width: 95%;
+        margin: auto;
+    }
     .navbar-nav{
         grid-template-columns: repeat(auto 1fr);
     }

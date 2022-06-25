@@ -17,6 +17,7 @@ class TemoignageFactory extends Factory
             'photo' => $this->faker->imageUrl(),
             'nom' => $this->faker->lastName(),
             'text' => $this->faker->realText(),
+            'fonction' => $this->faker->jobTitle(),
         ];
     }
 }
