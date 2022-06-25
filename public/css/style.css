@@ -80,7 +80,7 @@ header .nav-item{
     font-size: 28px;
     margin-bottom: 20px;
 }
-.banner .name_job h5{
+.banner .name_job .typed {
     color: var(--text-extra);
     font-weight: 700;
     font-size: 18px;
@@ -333,6 +333,7 @@ header .nav-item{
     /****Banner Mobile****/
     .banner_mobile{
         display: block;
+        min-height: 100vh;
     }
     .banner_mobile .reverse{
         display: flex;
@@ -372,11 +373,11 @@ header .nav-item{
         font-size: 28px;
         margin-bottom: 20px;
     }
-    .banner_mobile .name_job h5{
-        color: var(--text-extra);
+    .banner_mobile .name_job .typed_mobile {
+        color: var(--text-extra) ;
         font-weight: 700;
         font-size: 18px;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
     .banner_mobile .description p{
         margin-bottom: 40px;

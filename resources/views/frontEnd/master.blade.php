@@ -89,12 +89,11 @@
                                             {{ $banners->name }}
                                         @endforeach
                                     </h3>
-                                    @foreach ($banner as $banners )
-                                        <div id="typed-strings">
-                                            <span id="typed">{{ $banners->job }}</span>
-                                        </div>
-                                    @endforeach
-                                   
+                                    
+                                    <div id="typed-strings">
+                                        <span class="typed"></span>
+                                    </div>
+   
                                 </div>
                                 <div class="description">
                                     <p>
@@ -128,11 +127,10 @@
                                     {{ $banners->name }}
                                 @endforeach
                             </h3>
-                            <h5>
-                                @foreach ($banner as $banners )
-                                    {{ $banners->job }}
-                                @endforeach
-                            </h5>
+                            
+                            <div id="typed-strings">
+                                <span class="typed_mobile"></span>
+                            </div>
                         </div>
                         <div class="description">
                             <p>
@@ -165,7 +163,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5">
-                        <img class="mt-4" src="assets/images/about.jpg" alt="">
+                        <img class="mt-4" src="/images/about.jpg" alt="">
                     </div>
                     <div class="col-lg-7">
                         <div class="description mt-4">
@@ -361,14 +359,25 @@
     <script>
         $(document).ready(function(){
 
-            var typed = new Typed('#typed', {
-                stringsElement: '#typed-strings'
+            var typed = new Typed('.typed', {
+            
+            strings: ['Developpeur Web', '', 'Developpeur Mobile'],
+            smartBackspace: true, // this is a default
+                loop: true,
+                startDelay: 100,
+                typeSpeed: 50,
+                backSpeed:40,
             });
 
-            var typed = new Typed('.element', {
-  // Waits 1000ms after typing "First"
-  strings: ['First ^1000 sentence.', 'Second sentence.']
-});
+            var typed = new Typed('.typed_mobile', {
+            
+            strings: ['Developpeur Web', '', 'Developpeur Mobile'],
+            smartBackspace: true, // this is a default
+                loop: true,
+                startDelay: 100,
+                typeSpeed: 50,
+                backSpeed:40,
+            });
 
            $('.owl-carousel').owlCarousel({
                loop:true,
