@@ -10,11 +10,11 @@ class ServiceDetail extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title',
+        'libservice',
         'services_id',
     ];
 
-    public function serviceDetail()
+    public function service()
     {
         return $this->belongsTo(Service::class);
     }

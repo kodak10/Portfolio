@@ -5,66 +5,76 @@
     box-sizing: border-box;
 
    /*  --main-color: #317AC1;
-    --main-color: #3B556D;
-    --main-color: #2F4558;
-    --main-color: #2E3244;
-    --main-color: #222D41;
-    --main-color: #282E2E;
-    --main-color: #211A44;
-    --main-color: #124660;
-    --main-color: #212E53;
-    --main-color: #384454; */
+    
+    --main-color: #0e1620; */
 
     --banner-text: #163A5F;
-    --global-text: #150101;
+    --global-text: #fbfbfe;
     --text-extra: #E33E5A;
     --button: #E33E5A;
     --button-hover: #e33e59a4;
     --title: #163A5F;
     --hover:#163A5F;
+
+    --background: #202430;
+    --second-background: #404348;
 }
 
 body{
-    background-color: #fbfbfe !important;
+    background-color: var(--background) !important;
+}
+
+.title{
+    text-align: center;
+    color: #163A5F;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: #ffff;
+}
+
+section{
+    margin-bottom: 100px;
+}
+.banner, .banner_mobile{
+    margin-bottom: 100px;
 }
 /******Navbar*****/
 header{
-    padding: 30px 0px;
+    padding: 20px 0px;
 }
 .navbar-brand{
     font-weight: bold;
 }
 header .navbar{
-    background-color: #fbfbfe !important;
+    background-color: var(--background) !important;
 }
-header .nav-item{
-    margin-right: 20px;
+.nav-link{
+    color: var(--global-text) !important;  
 }
 .nav-link:hover{
-    color: #cda58e !important;
+    color: var(--text-extra) !important;
     transition: 0.3s ease-in-out;
-    font-weight: bold;
 }
 .navbar .active{
-    color: #cda58e !important;
+    color: var(--text-extra) !important;
     font-weight: bold;
 }
 .bar{
-    border-right: 4px solid #cda58e;
+    border-right: 4px solid #fff;
 }
 /*****Banner*******/
-
 .banner_mobile{
     display: none;
 }
 .banner{
-    min-height: 90vh;
-    background-color: #fbfbfe;
+    margin-top: 150px;
+    background-color: var(--background);
     display: grid;
     place-items: center;
 }
 .banner .content a{
-    color: #26104e;
+    color: var(--banner-text);
     text-decoration: none;
     font-size: 32px;
     margin-bottom: 20px;
@@ -72,7 +82,7 @@ header .nav-item{
 .banner .content a:hover{
     transform: translateY(-10px);
     transition: 0.3s all ease-in-out;
-    color:#cda58e;
+    color:var(--text-extra);
 }
 .banner .name_job h3{
     color: var(--banner-text);
@@ -89,6 +99,7 @@ header .nav-item{
 .banner .description p{
     margin-bottom: 40px;
     color: var(--global-text);
+    color: #fff;
 }
 .banner .description button{
     background: var(--button);
@@ -98,7 +109,7 @@ header .nav-item{
     margin-bottom: 100px;
 }
 .banner button:hover{
-    background-color:  var(--button-hover);
+    background:  var(--button-hover);
     border: 2px solid  var(--button-hover);
 }
 .banner .description button a{
@@ -118,18 +129,18 @@ header .nav-item{
     flex-direction: column;
 }
 /********About*******/
-.about{
-    min-height: 90vh;
+.abouts{
+    background: var(--second-background);
+    color: var(--global-text);
 }
 .about .experience{
     display: flex;
 }
 .about button{
-    background: #cda58e;
+    background: var(--banner-text);
     padding: 10px;
-    border: 2px solid #cda58e;
+    border: 2px solid #163A5F;
     border-radius: 5px;
-    margin-bottom: 100px;
 }
 .about button a{
     text-decoration: none;
@@ -137,15 +148,16 @@ header .nav-item{
     font-weight: bold;
 }
 .about img{
-    width: 400px;
-    height: 400px;
+
     border-radius: 5px;
 }
 .experience{
         display: grid !important;
         grid-template-columns: repeat(2, 1fr);
+        
 }
-.year,.projects{
+.about .year{
+    margin-right: 20px;
     box-shadow: 8px 6px 19px 2px #cacaca;
     -webkit-box-shadow: 8px 6px 19px 2px #cacaca;
     -moz-box-shadow: 8px 6px 19px 2px #cacaca;
@@ -154,24 +166,29 @@ header .nav-item{
     margin-top: 20px;
     text-align: center;
 }
-
-.year .number {
+.about .projects{
+    box-shadow: 8px 6px 19px 2px #cacaca;
+    -webkit-box-shadow: 8px 6px 19px 2px #cacaca;
+    -moz-box-shadow: 8px 6px 19px 2px #cacaca;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+.about .number {
     font-weight: bold;
-    font-size: 21px;
- }
-.projects .number{
-   font-weight: bold;
-    font-size: 21px;
+    font-size: 24px;
+    color: var(--text-extra);
 }
 
 
 /******Skills*******/
 .skills{
-    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.skills
 .skills .accordion-item .accordion-button{
     background-color: #cda58e;
     color: #ffff;
@@ -191,6 +208,12 @@ header .nav-item{
     color: #cda58e;
     font-size: 14px;
 }
+.accordion-button{
+    background-color: var(--banner-text) !important;
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 21px
+}
 .accordion-button:focus {
     z-index: 3;
     border-color: #fff !important;
@@ -199,46 +222,124 @@ header .nav-item{
 }
 
 /****Parcours****/
+.nav-tabs .active{
+    color: var(--text-extra) !important;
+}
+.timeline::before{
+    content: "";
+    height: 100%;    
+    width: 2px;
+    position: absolute;
+    left: 50% !important;
+    transform: translateX(-50%);
+    background-color: #E33E5A;
+    overflow: hidden;
+}
+
+.timeline{
+    height: auto;
+    width: 80%;
+    margin: 0 auto !important;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.timeline_content span{
+    color: gray;
+    margin-bottom: 10px;
+}
+.timeline_content p{
+    color: #fbfbfe;
+    margin-top: 10px;
+    color: #000;
+    font-weight: 600;
+}
+.timeline_content .job{
+    color: #E33E5A;
+    margin: 10px auto;
+}
+.job span{
+    color: #fff;
+}
+
+.timeline ul{
+    list-style: none;
+}
+.timeline ul li{
+    padding: 20px;
+    background-color: var(--global-text);
+    color: gray;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.timeline ul li:last-child{
+    margin-bottom: 0;
+}
+
+
+    .timeline ul li{
+        width: 50%;
+        position: relative;
+    }
+    .timeline ul li:nth-child(odd){
+        float: left;
+        clear: right;
+        transform: translateX(-30px) !important;
+    }
+    .timeline ul li:nth-child(even){
+        float: right;
+        clear: left;
+
+    }
+    .timeline ul li::after{
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: var(--text-extra);
+        border-radius: 50%;
+        top: 0;
+    }
+    .timeline ul li:nth-child(odd)::after{
+        right: -15px;
+        transform: translate(50%,-50%);
+    }
+    .timeline ul li:nth-child(even)::after{
+        left: -35px;
+        transform: translate(50%,-50%);
+    }
+
+
+
+
+
+
 .parcours nav i{
     margin: 30px;
     font-size: 32px;
-    color: #cda58e;
+    color: var(--text-extra);
 }
 .parcours nav{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 /*******Services*****/
 .services{
-    min-height: 70vh;
-    display: grid;
-    place-items: center;
-}
-.services .box{
-    background: #e8e8ee5e;
-    border-radius: 8px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    background: var(--second-background);
 }
-.services .box:hover{
-    background: #cda58e;
-    transform: rotate(-5deg);
-   
-    transition: 0.3s all ease-in-out;
+.services a{
+    background: none !important;
+color: black;
+float: inline-end;
 }
-.services .box:hover .content span{
-    color: #fff;
-}
-.services .box .content{
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-.services .more{
-    cursor: pointer;
-}
-
 /******Testimonial****/
-
+.testimonial{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 .testimonial .item{
     display: flex;
 }
@@ -251,23 +352,11 @@ header .nav-item{
 
 
 /******Portfolio*****/
-.portfolio{
-    min-height: 80vh;
-    display: grid;
-    place-items: center;
+.realisation{
+    color: var(--global-text);
 }
-.portfolio .item{
-    display: flex;
-    width: 50%;
-    margin: auto;
-}
-.portfolio .item .desc{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.portfolio img{
-    width: 250px !important;
+.realisation img{
+    width: 250px;
     height: 250px;
     border-radius: 3px;
 }
@@ -279,27 +368,33 @@ header .nav-item{
 }
 
 /******Project*****/
+
 .project{
-   background-color: #cda58e;
-
+   background-color: var(--second-background);
 }
-.project .box {
+.project .content_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 30vh;
-}
-.project .box img{
-    margin-top: -150px;
-}
-.project .content p{
-    margin-top: 100px;
-    text-align: center;
-    font-size: 21px;
-    color: #fff;
-    font-weight: 600;
+    color: #fbfbfe;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 
+.vide{
+    display: none;
+}
 
 @media (max-width:991px) {
+    section{
+        margin-bottom: 100px;
+    }
+    .banners, .banner_mobile{
+        margin-bottom: 100px;
+        margin-top: 0;
+    }
 
     /*******Navbar****/
     header {
@@ -310,6 +405,9 @@ header .nav-item{
         bottom: 0;
         width: 100%;
         z-index: 999;
+        box-shadow: 8px 6px 19px 2px #cacaca;
+        -webkit-box-shadow: 8px 6px 19px 2px #cacaca;
+        -moz-box-shadow: 8px 6px 19px 2px #cacaca;
     }
     .navbar-nav{
         display: grid !important;
@@ -333,7 +431,6 @@ header .nav-item{
     /****Banner Mobile****/
     .banner_mobile{
         display: block;
-        min-height: 100vh;
     }
     .banner_mobile .reverse{
         display: flex;
@@ -357,7 +454,7 @@ header .nav-item{
         align-items: center;
     }
     .banner_mobile .content a{
-        color: #26104e;
+        color: var(--banner-text);
         text-decoration: none;
         font-size: 32px;
         margin-bottom: 20px;
@@ -365,7 +462,7 @@ header .nav-item{
     .banner_mobile .content a:hover{
         transform: translateY(-10px);
         transition: 0.3s all ease-in-out;
-        color:#cda58e;
+        color:var(--text-extra);
     }
     .banner_mobile .name_job h3{
         color: var(--banner-text);
@@ -421,10 +518,6 @@ header .nav-item{
         flex-direction:column;
         
     }
-    
-    .banner .description button{
-        margin-bottom: 15px;
-    }
     .banner .content{
         margin-bottom: 10px;
         flex-direction: row;
@@ -435,16 +528,13 @@ header .nav-item{
     }
 
     /*********ABOUT********/
-    .about{
-        margin-top: 60px;
-    }
-
     .about .experience{
         display: grid !important;
         grid-template-columns: repeat(1, 1fr);
         
     }
     .about .experience .year{
+        margin-right: 0px;
         margin-top: 20px;
         margin-bottom: 0;
     }
@@ -461,16 +551,32 @@ header .nav-item{
     }
     /*******Testimonal****/
     .testimonial{
-       margin-top: 30px;             
+       margin-top: 30px;  
+       color: var(--global-text);           
+    }
+
+    /****Parcours*******/
+    .timeline{
+        width: 100%;
+        
+    }
+
+    /******** Project *******/
+    .project{
+        background-color: var(--banner-text);
+        text-align: center;
+    }
+     .project .content .row{
+        flex-direction: column-reverse;
+    }
+    .vide{
+        display: block;
+        min-height: 15vh;
     }
 
     
 }
 @media (max-width:641px) {
-    .wrapper{
-        width: 95%;
-        margin: auto;
-    }
     .navbar-nav{
         grid-template-columns: repeat(auto 1fr);
     }

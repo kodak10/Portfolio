@@ -13,7 +13,7 @@ class Service extends Model
         'title',
     ];
 
-    public function service()
+    public function servicesdetail()
     {
         return $this->hasMany(ServiceDetail::class, 'services_id' ,'id');
 

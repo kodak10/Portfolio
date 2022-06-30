@@ -2,17 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\About;
-use App\Models\Banner;
-use App\Models\Competence;
-use App\Models\Education;
-use App\Models\Portfolio;
 use App\Models\Service;
-use App\Models\Temoignage;
-use App\Models\Work;
 use Illuminate\Http\Request;
 
-class AccueilController extends Controller
+class ServiceDetailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,7 +14,7 @@ class AccueilController extends Controller
      */
     public function index()
     {
-        return view('frontEnd.master');
+        //
     }
 
     /**
@@ -51,19 +44,13 @@ class AccueilController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $banner = Banner::get();
-        $about = About::get();
-        $competence = Competence::orderby('title', 'desc')->get();
-        $work = Work::orderby('anneeDebut', 'desc')->get();
-        $education = Education::orderby('anneeDebut', 'desc')->get();
         $service = Service::get();
-        $portfolio = Portfolio::get();
-        $testimonial = Temoignage::get();
 
-            return view ('frontEnd.master', compact('banner','about','competence','work', 'education','service','portfolio','testimonial'));
-        }
+        return view ('frontEnd.master', compact('serv'));
+
+    }
 
     /**
      * Show the form for editing the specified resource.
